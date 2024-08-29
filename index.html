@@ -29,7 +29,43 @@
             </a>
           </div>
         </div>
+
+        <div class="background" id="right-panel">
+          <h2>What's on your mind?</h2>
+          <form id="blog-form">
+            <div id="username-div">
+              <label for="username-input">Username:</label>
+              <input
+                type="text"
+                placeholder="Username:"
+                id="username-input"
+                required
+              />
+            </div>
+            <div id="title-div">
+              <label for="title-input">Title:</label>
+              <input
+                type="text"
+                placeholder="Title:"
+                id="title-input"
+                required
+              />
+            </div>
+            <div id="content-div">
+              <label for="content-box">Content:</label>
+              <textarea
+                id="content-box"
+                placeholder="What's on your mind?"
+                rows="5"
+                cols="10"
+                required
+              ></textarea>
+            </div>
+            <button id="submit-button" type="button">Submit</button>
+          </form>
+        </div>
       </section>
+      <script src="./assets/js/form.js"></script>
     </div>
   </body>
 </html>
