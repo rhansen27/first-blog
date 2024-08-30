@@ -90,4 +90,81 @@ header div:hover p {
   width: 50%;
   margin-left: var(--border-thickness);
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#right-panel h2 {
+  align-self: center;
+  justify-content: center;
+  font-size: 250%;
+  margin-bottom: 50px;
+}
+form {
+  width: 80%;
+}
+#username-div {
+  display: flex;
+  flex-direction: column;
+}
+#title-div {
+  display: flex;
+  flex-direction: column;
+}
+#right-panel input,
+textarea,
+label,
+button {
+  width: 100%;
+  margin: 5px 0px 0px 50px;
+  font-weight: bold;
+}
+#right-panel input,
+textarea {
+  box-shadow: -1px 1px dimgray;
+}
+
+#right-panel input:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: 2px solid var(--active-border-color);
+  border: 1px solid var(--active-border-color);
+}
+#right-panel label::after {
+  content: "   *";
+  color: red;
+}
+#content-div {
+  margin-top: 10px;
+}
+.blog-img {
+  height: 65%;
+  width: 65%;
+  background: linear-gradient(180deg, yellow 20%, goldenrod 60%, black);
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 350%;
+  color: white;
+}
+button {
+  background-color: black;
+  height: 30px;
+  width: 101%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 780px) {
+  #right-panel {
+    flex-wrap: wrap;
+    font-size: smaller;
+    justify-content: center;
+    align-items: center;
+  }
 }
