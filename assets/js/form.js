@@ -87,3 +87,26 @@ function themeSwitch() {
       "Switch to dark mode!";
   }
 }
+
+function newBlogPost() {
+  const username = document.getElementById("username-input").value;
+  const title = document.getElementById("title-input").value;
+  const content = document.getElementById("content-box").value;
+  var posts = JSON.parse(localStorage.getItem("posts")) || [];
+  let newPost = {
+    username,
+    title,
+    content,
+  };
+  if (!username || !title || !content) {
+    alert("Please fill out all fields");
+    return;
+  }
+  posts.push(newPost);
+  localStorage.setItem("posts", JSON.stringify(posts));
+}
+
+document.getElementById("submt-button").onclick = function () {
+  newBlogPost();
+  window.location.href = "/blog.html";
+};
