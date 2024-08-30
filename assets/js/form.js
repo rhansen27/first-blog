@@ -54,5 +54,36 @@ function themeSwitch() {
   if (theme === "day") {
     theme = "night";
     day_night.src = moonPic;
+    localStorage.setItem("theme", "night");
+
+    for (const element of background) {
+      for (const key in darkStyle) {
+        element.style[key] = darkStyle[key];
+      }
+    }
+
+    for (const element of labels) {
+      element.style.color = "white";
+    }
+
+    document.getElementById("day-night-tooltip").innerHTML =
+      "Switch to light mode!";
+  } else {
+    theme = "day";
+    day_night.src = sunPic;
+    localStorage.setItem("theme", "day");
+
+    for (const element of background) {
+      for (const key in lightStyle) {
+        element.style[key] = lightStyle[key];
+      }
+    }
+
+    for (const element of labels) {
+      element.style.color = "black";
+    }
+
+    document.getElementById("day-night-tooltip").innerHTML =
+      "Switch to dark mode!";
   }
 }
