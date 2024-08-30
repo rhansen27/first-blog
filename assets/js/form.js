@@ -49,3 +49,10 @@ function loadTheme() {
       "Switch to light mode!";
   }
 }
+
+function themeSwitch() {
+  if (theme === "day") {
+    theme = "night";
+    day_night.src = moonPic;
+  }
+}
