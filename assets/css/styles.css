@@ -31,3 +31,63 @@ header img {
   border-radius: 10px;
   margin: 0px 20px;
 }
+header img:hover {
+  background-color: rgba(204, 223, 119, 0.377);
+  border-radius: 100%;
+  cursor: pointer;
+}
+header div {
+  position: relative;
+  display: block;
+}
+header div p {
+  display: none;
+  position: absolute;
+  right: 75px;
+  top: 20px;
+  background-color: dimgray;
+  color: white;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 200px;
+}
+header div:hover p {
+  display: block;
+}
+
+.spacer {
+  border: var(--border-thickness) solid black;
+  border-left: none;
+  border-right: none;
+  padding: 3px;
+}
+#main-container {
+  background-color: white;
+  border: var(--border-thickness) solid black;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  display: flex;
+  height: 100%;
+}
+#left-panel {
+  border: var(--border-thickness) solid black;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  width: 50%;
+  margin-right: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#right-panel {
+  border: var(--border-thickness) solid black;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  width: 50%;
+  margin-left: var(--border-thickness);
+  display: flex;
+}
