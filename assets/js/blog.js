@@ -60,3 +60,31 @@ function getOptions() {
     selector.appendChild(opt);
   }
 }
+
+document.getElementById("back-button").onclick = function () {
+  window.location.href = "/index.html";
+};
+
+document.getElementById("delete-button").onclick = function () {
+  const whatToDelete = document.getElementById("select-delete").value || "";
+  const posts = JSON.parse(localStorage.getItem("posts"));
+  const newArray = [];
+  for (const title in posts) {
+    if (
+      posts[title].title.toLowerCase() +
+        " by " +
+        posts[title].username.toLowerCase() ===
+      whatToDelete.toLowerCase()
+    ) {
+      if (confirm("Are you sure you want to delete this post")) {
+      } else {
+        newArray.push(posts[title]);
+      }
+    } else {
+      newArray.push(posts[title]);
+    }
+  }
+
+  localStorage.setItem("posts", JSON.stringify(newArray));
+  window.location.href = "/blog.html";
+};
