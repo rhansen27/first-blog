@@ -49,3 +49,14 @@ function buildPostContainers(repeat = 0) {
     ).innerText = `Posted by: ${post[i].username}`;
   }
 }
+
+function getOptions() {
+  const selector = document.getElementById("select-delete");
+  const posts = JSON.parse(localStorage.getItem("posts"));
+  for (const post in posts) {
+    const opt = document.createElement("option");
+    opt.innerText = posts[post].title + " by " + posts[post].username;
+    opt.value = posts[post].title + " by " + posts[post].username;
+    selector.appendChild(opt);
+  }
+}
